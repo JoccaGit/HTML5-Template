@@ -1,0 +1,73 @@
+/* Responsive Footer Template CSS - Martin Angelov 
+edited by JoccaWeb 
+
+Jocca edit:
+- in this css file the footers are not sticky-non-fixed. See the code in demo.css in the Angelov tutorial files*/
+
+.footer-distributed {
+	/* position: relative; not needed*/
+	background: #3b00b3; /* violet-ish */
+	/* background-color: #292c2f; dark grey */
+	/* see http://www.w3schools.com/css/css3_shadows.asp */
+	/* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12); i don't see a box-shadow... */
+	/* see http://www.w3schools.com/css/css3_box-sizing.asp, box-sizing: border-box was applied for this footer, but i disabled/removed it, because the rest of the site doesn't have it. */	
+	/* width: 100%;	not needed since footer wrapper*/	
+	/* font: normal 16px sans-serif; disabled this, was already applied in rest of site */	
+	height: 80px;	
+}
+
+.footer-distributed .footer-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Footer nav menu left:
+Styling of the p element WITH footer links class */
+.footer-distributed .footer-wrapper p.footer-links {	
+	color: white;
+	margin-left: 21px;
+	padding-top: 10px;	
+}
+
+/* make menu items horizontal and remove link underline etc. */
+.footer-distributed .footer-wrapper p.footer-links a {
+	display: inline-block;
+	line-height: 1.7;
+	text-decoration: none;
+	color: inherit;
+	font-size: 18px;
+}
+
+/* copyright & company name */
+.footer-distributed .footer-wrapper p {	
+	color: white;
+	/* color:  #8f9296; */
+	font-size: 14px;
+	margin-left: 20px;
+	margin-top: -5px;
+}
+
+.footer-distributed .footer-wrapper .footer-right {
+	float: right;
+	margin-right: 15px;
+	margin-top: -17px;
+}
+
+.footer-distributed .footer-wrapper .footer-right a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	/* background-color: #33383b; dark(er) grey */
+	background: #2a0080; /* dark(er) purple-ish */
+	border-radius: 2px;
+	font-size: 20px;
+	color: white;
+	text-align: center; /* center social media icons (these are text now instead of img's) */
+	line-height: 35px;
+	margin-left: 3px;
+}
+
+/* Responsiveness: */
+/* @media (max-width: some max-widht pixels) {
+	/* Apparently this footer, in this template does not need any responsive design. */	
+}

@@ -1,0 +1,158 @@
+/* MEDIA QUERIES FOR THE RESPONSIVE LAYOUT
+
+Keep in mind that style settings in styles.css are overridden by the media queries. This means it's possible you have to undo settings, for example float: none; for an element that must not float anymore during a certain width of the viewport 
+
+@media screen and (max-width: 1220px) {
+    
+    Only changes to the desktop screen layout (1220 and more) need extra CSS code in a media query. See styles.css for the desktop screen code. 
+    Turns out, till 800px width and smaller the design is fluid/responsive enough. So this media query was not needed.
+
+    HEADER
+    headerNAV MENU
+    headerMOBILE MENU
+    SPACER
+    THREE-COLUMNS
+    ONE BIG TWO SMALL
+    FOOTER, see footerscript
+} */
+
+@media screen and (max-width:750px) {    
+    
+    /* HEADER */
+    header h1 {        
+        text-align: center;
+    }
+    header p {
+        margin: 0 0 40px 5px;
+        text-align: center;
+    }    
+    /* headerNAV MENU */
+    header nav {
+        position: absolute;
+        top: 110px;
+        left: 25%;        
+    }
+    /* headerMOBILE MENU */    
+    
+    /* SPACER */
+    #spacer .spacer-wrapper form input {
+        width: 300px;
+    }
+    
+    /* THREE-COLUMNS go vertical */
+    #three-columns .three-columns-wrapper article {    
+    float: none;
+    width: 450px;
+    margin: 0 auto 20px;
+    }
+    
+    /* ONE BIG TWO SMALL */
+    .row p {
+        margin-left: 100px;
+    }   
+}
+
+@media screen and (max-width: 500px) {
+    
+    /* The alternative menu is now enabled, see the code below.
+    HEADER */
+    header {
+        margin-top: 60px;        
+    }
+    header h1 {
+        font-size: 40px;
+        padding-left: 10px;
+        text-align: center;
+    }
+    header p {
+        float: none;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+    /* headerNAV MENU now disabled */
+    header nav {        
+        display:none;
+    }     
+    /* headerMOBILE MENU:
+    .toggleMobile contains the code for the switch and it's animation */
+    .toggleMobile {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        display: block;
+        width: 40px;
+        height: 36px;
+        cursor: pointer;
+        z-index: 999;
+    }
+    .toggleMobile span.symbol-bar1, .toggleMobile span.symbol-bar2, .toggleMobile span.symbol-bar3 {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 8px;
+        left: 0;
+        background: #eda28c;
+        -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+        transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+    }
+    .toggleMobile span.symbol-bar1 {
+        top: 0;
+    }
+    .toggleMobile span.symbol-bar2 {
+        top: 14px;
+    }
+    .toggleMobile span.symbol-bar3 {
+        top: 28px;
+    }
+    /* When the switch symbol is clicked and the menu is open the lowest of the three bars (of the symbol, not the menu itself!) will hide, and the others position one above the other and then rotate contrary. */
+    .toggleMobile.active span.symbol-bar1 {
+        /* when .toggleMobile gets active in script.js */
+        top: 14px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+        transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+        }
+    .toggleMobile.active span.symbol-bar2 {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+                transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+    }
+    .toggleMobile.active span.symbol-bar3 {
+        opacity: 0;
+        -webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+        transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+    }
+    #mobileMenu {
+        display: block;
+        z-index: 99;
+    }      
+    
+    /* SPACER */
+    #spacer {
+        height: 63px;
+        padding-bottom: 15px;
+    }
+    #spacer .spacer-wrapper form input {
+        width: 150px;
+    }
+
+    /* THREE COLUMNS */
+    #three-columns .three-columns-wrapper article {      
+    float: none;
+    width: 83%;
+    margin-left: 7%;
+    }
+    
+    /* ONE BIG TWO SMALL */
+    .obts-wrapper article {
+        width: 80%;
+    }   
+}

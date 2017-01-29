@@ -1,0 +1,236 @@
+<!-- The Jocca HTML5 Full Template
+
+December 2016:
+The goal of this project is to have an HTML5 template-site with a header, a main menu (and alternate menu), a sticky (but not fixed) footer and two mid-sections. Responsive of course, through the use of media queries. 
+
+This template is inspired by www.lingulo.com and www.tutorialzine.com.
+
+Specifically:
+https://github.com/ChristophAnastasiades/ and
+See http://www.lingulo.com/tutorials/css/how-to-build-a-html5-website-from-scratch for information on the included jQuery code (modernizer and respond and prefix free) and more.
+
+http://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/ by Martin Angelov
+Note: Sticky footers are only in the demo.css.
+
+Additional resources:
+- The CSS reset: Eric Meyer, see reset.css.
+- Copyright free Clock and Paper Plane icon provided by 
+http://www.flaticon.com/
+- https://www.taniarascia.com/, very insightfull site for starting webdevelopers 
+- BootstrapCDN: https://www.bootstrapcdn.com/
+https://getbootstrap.com/ (not that this site uses it at the moment ;-) )
+- Updateyourfooter.com 
+- http://ryanfait.com/sticky-footer/ I will save the sticky footer for the next project.
+Note: Ryan suggests handcoding responsive website instead of using Bootstrap. Bootstrap can be to bulky and slow apparently. Nevertheless, it's what i'm gonna try now, having handcoded this template. -->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <!-- from the footer files: -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Jocca HTML5 Template</title>
+        
+        <!-- stylesheets -->
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+        
+        <!-- footer files css (including footer media queries -->
+        <link rel="stylesheet" href="css/footer-distributed.css">
+        <!-- See www.bootstrapcdn.com . This online stylesheet seems to be only for the social media icons in the footer, possibly download this later to be sure: -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        
+        <!-- media queries -->
+        <link rel="stylesheet" href="css/media-queries.css" type="text/css" media="screen" />
+        
+        <!-- Fonts (Jocca edit: I switched the fonts: <link href='http://fonts.googleapis.com/css?family=Open+Sans|Baumans' rel='stylesheet' type='text/css'> ) -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet"> 
+
+        <!-- jQuery -->
+        <script src="js/vendor/modernizr.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+        
+        <!-- include extern jQuery file but fall back to local file if extern one fails to load -->
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js\/vendor\/1.7.2.jquery.min.js"><\/script>')</script>
+        
+        <!-- Jocca edit: Prefix Free: jQuery takes care of the vendor prefixes. In the Sublime Text (3) editor's there's also a Autoprefixer plugin (https://packagecontrol.io/packages/Autoprefixer), so maybe that's handier? (for a next project)  -->
+        <script src="js/vendor/prefixfree.min.js"></script>        
+        
+        <!-- JavaScript for the alternative menu. It uses the jQuery slideToggle function -->
+        <script src="js/script.js"></script>
+        
+        <!-- backwards compatible margin-correction -->
+        <!--[if lt IE 9]>
+            <style>
+                header
+                {
+                    margin: 0 auto 20px auto;
+                }                 
+            </style>
+        <![endif]-->        
+	</head>
+
+	<body>        						<!-- the header -->
+        <header>
+			<!-- Jocca note: The alternative or togglemobile menu. This menu appears when the browserwidth falls below the max-width assigned in the media queries. See DOM/css layout in Firebug-Firefox or development console's in other browsers. 
+			See also script.js -->
+            <div class="toggleMobile">
+               	<span class="symbol-bar1"></span>
+               	<span class="symbol-bar2"></span>
+               	<span class="symbol-bar3"></span>
+            </div>
+            	
+            <div id="mobileMenu">
+               	<ul>
+                   	<li><a href="#">Home</a></li>
+				 	<!-- Jocca edit: javascript:void(0) does nothing because the expression "0" has no effect in JavaScript: <a href="javascript:void(0)">Home</a>. 
+				 	The expression "0" is evaluated, but it is not loaded back into the current document. So we can use it for this testmenu since we have no other menu content (a href="" works too but then the page tries to load something and shows white for a lot of milliseconds).		 	
+				 	Jocca update: turns out the # sign works just as fine as javascript:void(0), # is simpler, no suggestion of javascripts that you should use and at the bottom of the viewport the url-link is shown -->
+                    <li><a href="#">Porfolio</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            	
+            <a href="index.html">
+				<h1>Jocca HTML5</h1>
+            </a>
+				
+			<p>A responsive template</p>           
+            
+            <nav>                           <!-- main menu -->
+            	<!-- <h2 class="hidden">Our navigation</h2> Jocca edit: see Chris's tutorial, i don't agree with using hidden headings just to have a proper html5 outlining, it creates unnecessary and confusing markup imho. As long as you study proper guidelines of html5 elements (on w3schools or other tutorialsites), you're fine -->
+               	<ul>
+                   	<li><a href="#">Home</a></li>
+                   	<li><a href="#">Porfolio</a></li>
+                   	<li><a href="#">About</a></li>
+                   	<li><a href="#">Contact</a></li>
+               	</ul>
+            </nav>
+        
+        </header>
+        							<!-- the spacer -->
+		<section id="spacer">        	         
+            
+			<div class="spacer-wrapper">				
+				
+				<form action="#">
+					<!-- after clicking/tapping the search button, the site remains on the search result link while refreshing ( index.html?sitesearch=Enter+a+word...&start_search=Search# ). So we have to return to index.html explicitly for further testing. I added a link to itself (index.html) on the logo, see the header -->
+					<input type="text" name="sitesearch" value="Enter a word ..."/>
+					<input type="submit" name="start_search" class="button" value="Search"/>
+				</form>				
+			
+			</div>
+		</section>
+        							<!-- three columns -->
+		<section id="three-columns">
+
+			<div class="three-columns-wrapper">
+        	
+           		<article>            	               
+               		<img src="img/elephant-right.png" alt="Eleph R"/>                
+               		<h3>First Article</h3>
+                	
+               		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nisl felis, interdum sit amet bibendum ut, blandit varius sapiens.</p>
+           		</article>
+            	
+           		<article>            	     
+               		<img src="img/elephant-left.png" alt="Eleph L"/>
+                	
+               		<h3>Second Article</h3>
+                	
+               		<p>Mauris id risus quis ante volutpat aliquet. Aenean in ultricies leo. Phasellus sodales nec massa eget interdum.</p>
+           		</article>
+            
+           		<article>            	    
+               		<img src="img/elephant-right.png" alt="Eleph R"/>                
+                		<h3>Third Article</h3>
+                
+                		<p>Vivamus hendrerit pharetra lacus, ultricies lobortis augue porttitor eu. Praesent fermentum commodo quam, non fringilla urna ornare at.</p>
+            		</article>
+				
+			</div><!-- end three columns-wrapper -->
+
+				<!-- Jocca edit: during (in this case horizontal) alignment of sections (including header, footer, article etc) elements need to be cleared to keep proper vertical alignment of all sections. -->
+           	<br class="clear"/>
+        
+        </section>        
+        				<!-- ONE BIG TWO SMALL (obts) Section -->
+        <section id="obts">        	
+            
+            <div class="obts-wrapper">
+            		
+            	<article>           	 
+               		<h3>Big Article</h3>
+                
+               		<p>This is an HTML5 Responsive template. I was inspired by a few tutorials, but I intensively rewrote the code to get a good working knowledge of the html, css and javascript involved. So I can say I handcoded this template myself in HTML5 and CSS3. Should be browser-compatible from IE7.<br>See the source code for the tutorial-links and my additional comments if you like.</p>                		
+                
+               		<p>Praesent nec augue dapibus, sollicitudin tellus eget, tincidunt lorem. Suspendisse lacinia ex at dolor egestas pulvinar. Sed efficitur vestibulum leo et semper. Morbi condimentum nisi eu urna maximus, vitae suscipit massa convallis. Donec dapibus augue turpis. Suspendisse auctor luctus imperdiet. Pellentesque euismod ipsum vel tellus laoreet ultrices.</p>
+            	</article>            
+            	
+				<section id="ts">               
+            
+               		<article class="row">                   
+            
+                    		<img src="img/icon-paper-plane.png" width="80" class="rocket" alt="Some alt text"/>
+                    
+                    		<p>Sed efficitur vestibulum leo et semper. Morbi condimentum nisi eu urna maximus, vitae suscipit massa convallis.</p>
+               		</article> 
+                
+               		<article class="row">                   
+            
+                   		<img src="img/icon-clock.png" width="80" class="clock" alt="Some alt text"/>
+                    
+                   		<p>Fusce in accumsan dolor. Suspendisse et malesuada nisl. Suspendisse auctor luctus imperdiet.</p>
+                	</article> 
+            	
+            	</section>
+			
+			</div>			<!-- end obts-wrapper -->
+			
+			<br class="clear"/>        
+        </section>		
+	
+		<!-- the footer -->
+			<!-- client-side refresh year javascript. See http://updateyourfooter.com/
+	       		<p>&copy; 2007<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());
+                    </script> - JoccaWeb.nl</p> 
+
+            To be incorporated in new footerscript -->
+
+        <footer class="footer-distributed">
+
+        	<div class="footer-wrapper">        	
+
+				<p class="footer-links">
+				
+					<a href="#">Home</a>
+					·
+					<a href="#">Portfolio</a>
+					·
+					<a href="#">About</a>
+					·					
+					<a href="#">Contact</a>
+				</p>
+
+				<p>JoccaWeb &copy; 2016</p>
+					
+				<div class="footer-right">
+						<!-- the social media icons from Bootstrap CDN: -->
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+			
+			</div><!-- end footer-wrapper -->
+
+		</footer>
+                
+	</body>
+</html>

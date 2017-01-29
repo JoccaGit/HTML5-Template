@@ -1,0 +1,301 @@
+/* This CSS file is part of the HTML5 Jocca Full Template.  
+Footercode is separate from the rest, see index.html for the responsive footer templates.
+
+Tips:
+- For margin and other tags: top right bottom left (clockwise) 
+- http://www.w3schools.com/colors/colors_picker.asp
+- the HTML5 display-role reset for older browsers is already applied in reset.css */
+
+/* GLOBAL */
+body {
+    /* default white background color and default black text color.
+    Default font type and size for the site: */    
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+}
+p {
+    margin: 5px 0;
+    line-height: 23px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color .5s ease;
+}
+/* for <div span="strong"></div> */
+
+strong {
+    font-weight: bold;
+}
+/* HEADER */
+
+header {
+    position: relative;
+    width: auto;
+    max-width: 1200px;
+    /* The max-width has to be set for each section, including headers, footers etc.
+    A margin with 0 and auto values keeps the element (header in this case) centered in case the browser width is larger than the max-width.
+    
+    Repeating the tip for margin: top right bottom left (clockwise)
+    
+    Changing the margin's top en bottom values creates space between the elements (in this case between header and spacer). See the layout testborder class at the end of this stylesheet. Space between elements can be useful if for example a partly transparent picture has to come partly outside of the element. With the testborder you get a clear view of the invisible borders of the elements. */
+    
+    margin: 0 auto;
+    /* bottom:0 and left: auto can be omitted */
+}
+header h1 {
+    /* ((Google-)fonts have their own embedded margins and paddings apparently, so should you want letters to touch the border of the element, negative margins have to be applied.) */    
+    padding: 18px 0 7px 19px;
+    font-family: 'Montserrat', cursive;
+    font-size: 45px;
+    color: #999;
+}
+header p {
+    padding: 0 0 7px 142px;
+    font-size: 19px;
+}
+/* headerNAV MENU */
+
+nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: block;
+    float: left;
+    padding: 3px 15px;
+}
+nav ul li a {
+    text-transform: uppercase;
+    transition: all .25s ease;
+}
+nav ul li a:hover {
+    color: #8080ff;
+}
+/* headerMOBILE MENU:
+The mobile alternate menu itself and the styling for the menu items */
+
+#mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+/* The three menu bars (home, portfolio, about) */
+
+#mobileMenu ul li {
+    display: block;
+    background: #e56038;
+    color: #fff;
+    padding: 12px 0;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #cc5836;
+}
+.toggleMobile {
+    display: none;
+}
+
+/* SPACER */
+#spacer {
+    position: relative;
+    width: auto;
+    height: 80px;
+    /* vertical margin settings of an element with auto width and a fixed height do not affect the sticky footer apparently (the non-disappearing scrollbar problem stays away). The same goes for margin settings in the wrappers of vertically stacked elements (such as this spacer). I think... */
+    margin: 19px 0 35px 0;
+    /* background color covers whole width: */    
+    background: #b3b3ff;
+}
+#spacer .spacer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#spacer .spacer-wrapper form {
+    float: right;
+    margin: 23px 15px 25px 0;
+}
+#spacer .spacer-wrapper form input {
+    padding: 7px 7px 7px 10px;
+    width: 400px;
+    border: 0;
+    border-radius: 5px;
+    /* input has it's own default font size, setting fontsize matching the site: */    
+    font-size: 15px;
+}
+#spacer .spacer-wrapper form input[type=submit] {
+    margin-left: 5px;
+    width: auto;
+    padding: 6px 16px;
+    text-shadow: none;
+    cursor: pointer;
+    box-shadow: none;
+    background: #333;
+    color: #fff;
+}
+
+/* THREE-COLUMNS */
+#three-columns {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#three-columns .three-columns-wrapper {
+    /* Get the three columns a bit more center. */    
+    margin-left: -10px;
+}
+
+#three-columns .three-columns-wrapper article {
+    /* It helps to draw the columns and the spaces inbetween to figure out the right percentages. */    
+    float: left;
+    width: 30%;
+    margin-left: 3%;
+}
+
+#three-columns article img {
+    float: left;
+}
+
+#three-columns article h3 {
+    margin: 0 0 10px 75px;
+    font-size: 20px;
+}
+
+#three-columns article p {
+    margin-left: 75px;
+}
+
+/* ONE BIG TWO SMALL (obts)
+Including not needed selectors that show the structure */
+#obts {
+    /* position: relative; only needed with top element? */
+    width: auto;
+    max-width: 1200px;
+    margin: 0 auto 30px;    
+}
+
+.obts-wrapper {
+    margin: 32px 0 0 23px;
+}
+
+.obts-wrapper article {
+    float: left;
+    width: 43%;
+    /* margin-bottom: 10px; */
+}
+
+.obts-wrapper .ts {
+    float: left;
+}
+
+.obts-wrapper article h3 {
+    line-height: 12px;
+    font-size: 22px;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+
+/* .row class resides in #obts .obts-wrapper .ts article */
+.row {
+    position: relative;
+    margin: 25px 0 0 60px;
+    width: 360px;
+}
+
+.row img {
+    float: left;
+}
+
+.row p {
+    margin-left: 120px;
+}
+
+/* .obts-wrapper .ts .row article img: */
+
+.rocket,
+.clock {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 80px;
+}
+
+.rocket:hover {
+    opacity: 0;
+    transition: opacity 0.4s ease 0.2s;
+    animation-name: stylie-transform-keyframes;
+    animation-duration: 700ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transform-origin: 0 0;
+}
+
+.clock:hover {
+    animation-name: stylie-transform2-keyframes;
+    animation-duration: 100ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: 0 0;
+}
+
+@keyframes stylie-transform-keyframes {
+    0% {
+        transform: translateX(30px) translateY(46px) rotate(0deg) translate(-50%, -50%);
+        animation-timing-function: cubic-bezier(.25, .25, .75, .75);
+    }
+    100% {
+        transform: translateX(260px) translateY(-150px) rotate(0deg) translate(-50%, -50%);
+    }
+}
+
+@keyframes stylie-transform2-keyframes {
+    0% {
+        transform: translateX(40px) translateY(40px) rotate(0deg) translate(-50%, -50%);
+        animation-timing-function: cubic-bezier(.25, .25, .75, .75);
+    }
+    100% {
+        transform: translateX(50px) translateY(40px) rotate(0deg) translate(-50%, -50%);
+    }
+}
+
+/* BUTTONS */
+.button {
+    padding: 7px 14px;
+    border: 1px solid #c3532e;
+    background-image: linear-gradient(bottom, #E56038 0%, #ff8c66 100%);
+    background-image: linear-gradient(to bottom, #ff8c66 0%, #E56038 100%);
+    background-color: #eb653c;
+    color: #ebe8de;
+    text-shadow: 1px 1px 0px #ff8155;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3)
+}
+
+.button:hover {
+    background: none #ebe8de;
+    border-color: #ebe8de;
+    text-shadow: none;
+    color: #4a463b
+}
+
+/* MISC */
+.clear {
+    clear: both;
+}
+* {
+    /* Layout Testborder class for elements. To be removed in a production version of the site. Also, the production version should have minified css, see the Lingulo tutorial manual. 
+    The * results in applying the styling for all elements. !important results in overriding other border stylings. With !important, you cannot apply bordersettings for individual elements, but bordersettings for all elements won't work without !important... */    
+    xborder: 1px solid red !important;
+}
