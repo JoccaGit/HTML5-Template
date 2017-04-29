@@ -21,4 +21,4 @@ Additional resources:
 http://www.flaticon.com/
 - https://www.taniarascia.com/, very insightfull site for starting webdevelopers 
 - BootstrapCDN: https://www.bootstrapcdn.com/
-https://getbootstrap.com/ (not that this site uses it at the moment ;-) )
+https://getbootstrap.com/
