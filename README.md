@@ -1,5 +1,5 @@
 # An HTML5 Template
-A responsive template with vanilla CSS, no frameworks.
+A responsive template with vanilla CSS.
 
 Handy for if you wanna compare with for example Bootstrap boilerplate HTML files.<br>
 Also if you wanna create a working layout for a site without help of a framework.
