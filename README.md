@@ -19,6 +19,6 @@ Additional resources:
 - The CSS reset: Eric Meyer, see reset.css.
 - Copyright free Clock and Paper Plane icon provided by 
 http://www.flaticon.com/
-- https://www.taniarascia.com/, very insightfull site for starting webdevelopers 
+- https://www.taniarascia.com/, very insightful site for starting webdevelopers 
 - BootstrapCDN: https://www.bootstrapcdn.com/
 https://getbootstrap.com/
