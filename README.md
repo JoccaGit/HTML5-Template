@@ -2,8 +2,7 @@
 A responsive template with vanilla CSS and JS.<br>
 No frameworks (except for jQuery).
 
-Handy for if you wanna compare with for example Bootstrap boilerplate HTML files.<br>
-Also if you wanna create a working layout for a site without help of a framework.
+Handy for comparing with for example Bootstrap CSS code and for creating a working layout for a site without the help of a framework.
 
 ### The Goal
 To have an HTML5 template-site with a header, a main menu (and alternate menu), 
