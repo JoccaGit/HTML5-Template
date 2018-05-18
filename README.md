@@ -2,7 +2,8 @@
 A responsive template with vanilla CSS and JS and jQuery.
 
 Handy for comparing with for example Bootstrap CSS code and for creating a working layout for a site without for example Bootstrap. The layout is float-based.
-Update 2018:
+
+Update 2018:<br>
 Maybe it's advisable to replace the floats with a flex-box layout. See the credits.
 
 ### The Goal
