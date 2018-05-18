@@ -1,8 +1,9 @@
 # An HTML5 Template
-A responsive template with vanilla CSS and JS.<br>
-No frameworks (except for jQuery).
+A responsive template with vanilla CSS and JS and jQuery.
 
-Handy for comparing with for example Bootstrap CSS code and for creating a working layout for a site without the help of a framework.
+Handy for comparing with for example Bootstrap CSS code and for creating a working layout for a site without for example Bootstrap. The layout is float-based.
+Update 2018:
+Maybe it's advisable to replace the floats with a flex-box layout. See the credits.
 
 ### The Goal
 To have an HTML5 template-site with a header, a main menu (and alternate menu), 
@@ -16,3 +17,5 @@ This template is inspired by www.lingulo.com and www.tutorialzine.com.
 - The CSS reset: Eric Meyer, see reset.css.
 - Copyright free Clock and Paper Plane icon provided by [Flat Icon](http://www.flaticon.com/)
 - [TaniaRascia.com](https://www.taniarascia.com/), very insightful site for starting webdevelopers.
+- [Create an easy Flexbox grid](https://www.taniarascia.com/easiest-flex-grid-ever/)
+- [Complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
