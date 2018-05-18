@@ -33,12 +33,7 @@ header {
     position: relative;
     width: auto;
     max-width: 1200px;
-    /* The max-width has to be set for each section, including headers, footers etc.
-    A margin with 0 and auto values keeps the element (header in this case) centered in case the browser width is larger than the max-width.
-    
-    Repeating the tip for margin: top right bottom left (clockwise)
-    
-    Changing the margin's top en bottom values creates space between the elements (in this case between header and spacer). See the layout testborder class at the end of this stylesheet. Space between elements can be useful if for example a partly transparent picture has to come partly outside of the element. With the testborder you get a clear view of the invisible borders of the elements. */
+    /* The max-width has to be set for each section, including headers, footers etc. A margin with 0 and auto values keeps the element (header in this case) centered in case the browser width is larger than the max-width. Repeating the tip for margin: top right bottom left (clockwise). Changing the margin's top en bottom values creates space between the elements (in this case between header and spacer). See the layout testborder class at the end of this stylesheet. Space between elements can be useful if for example a partly transparent picture has to come partly outside of the element. With the testborder you get a clear view of the invisible borders of the elements. */
     
     margin: 0 auto;
     /* bottom:0 and left: auto can be omitted */
