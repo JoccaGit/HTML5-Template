@@ -1,7 +1,7 @@
 # An HTML5 Template
 A responsive template with vanilla CSS and JS and jQuery.
 
-![html5 template](img/modal04-html5template.jpg) 
+[![html5 template](img/modal04-html5template.jpg)](http://joccaweb.nl/demos/html5template/)
 
 Handy for comparing with for example Bootstrap CSS code and for creating a working layout for a site without for example Bootstrap. The layout is float-based.
 
