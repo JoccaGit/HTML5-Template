@@ -1,7 +1,7 @@
 # An HTML5 Template
 A responsive template with vanilla CSS and JS and jQuery.
 
-![scene in a-frame inspector](img/modal02-aframe-vr-b.jpg) 
+![html5 template](img/modal04-html5template.jpg) 
 
 Handy for comparing with for example Bootstrap CSS code and for creating a working layout for a site without for example Bootstrap. The layout is float-based.
 
